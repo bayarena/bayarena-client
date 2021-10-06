@@ -10,7 +10,7 @@
   border-bottom: 1px solid gray;
 }
 #body {
-  height: 100%;
+  height: 100vh;
   width: 1280px;
   margin: 0 auto;
   padding-bottom: 24px;
@@ -90,4 +90,9 @@
 
 .lecture-avatar {
   width: 24px;
+}
+
+.lecture-link {
+  color: inherit;
+  text-decoration: none;
 }

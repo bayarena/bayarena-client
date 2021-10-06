@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './index.css';
 import axios from "axios";
+import {Link} from 'react-router-dom';
 
 function MainPage() {
         const [lectures, setLectures] = React.useState([])
@@ -34,7 +35,8 @@ function MainPage() {
             {lectures.map(function(lecture, index){
                     return (
                     <div className="lecture-card">
-                        <div>
+                        <Link className='lecture-link' to={`/lectures/${index}`}>
+                        <div> 
                             <img className="lecture-img" src={lecture.imageUrl}/>
                         </div>
                     <div className="lecture-contents">
@@ -47,8 +49,9 @@ function MainPage() {
                         <div className="lecture-motivator">
                             <img className="lecture-avatar" src="images/icons/avatar.png"/>
                             <span>{lecture.motivator}</span>
-                        </div>
+                        </div> 
                     </div>
+                </Link>
              </div>
                     );
                 })
