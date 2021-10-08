@@ -9,7 +9,7 @@ function MainPage() {
             function(){
                 axios
                 .get(
-                    'https://1bb9c18e-7cd4-4da2-bd36-5fae32075ca7.mock.pstmn.io/products')
+                    'https://1bb9c18e-7cd4-4da2-bd36-5fae32075ca7.mock.pstmn.io/lectures')
                 .then(function(result){
                     const lectures = result.data.lectures;
                     setLectures(lectures);
@@ -21,12 +21,6 @@ function MainPage() {
 
     return (
      <div>  
-        <div id="header">
-        <div id="header-area">
-            <img src="images/icons/logo.png" />
-        </div>
-    </div>
-    <div id="body">
         <div id="banner">
             <img src="images/banners/banner0.png" />
        </div>
@@ -35,7 +29,7 @@ function MainPage() {
             {lectures.map(function(lecture, index){
                     return (
                     <div className="lecture-card">
-                        <Link className='lecture-link' to={`/lectures/${index}`}>
+                        <Link className='lecture-link' to={`/lectures/${lecture.id}`}>
                         <div> 
                             <img className="lecture-img" src={lecture.imageUrl}/>
                         </div>
@@ -57,8 +51,6 @@ function MainPage() {
                 })
             }
         </div>
-    </div>
-    <div id="footer"></div>
     </div>  );
 }
 
