@@ -1,23 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 #banner {
   height: 600px;
-  background-color: yellow;
-}
-
-#header-area {
-  width: 1280px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-#header-area > img {
-  width: 172;
-  height: 48;
+  background-color: white;
 }
 
 #banner > img {
@@ -67,7 +50,6 @@
 .lecture-motivator {
   display: flex;
   align-items: center;
-  margin-top: 12px;
 }
 
 .lecture-avatar {
@@ -77,4 +59,21 @@
 .lecture-link {
   color: inherit;
   text-decoration: none;
+}
+
+.lecture-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.lecture-date {
+  font-size: 12px;
+  color: rgb(136, 136, 136);
+}
+
+#lecture-headline {
+  font-weight: 800;
+  margin-top: 16;
 }
